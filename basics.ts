@@ -97,3 +97,35 @@ const stringArray = insertAtBeginning(['a', 'b', 'c'], 'd');
 // updatedArray[0].split('');  
 // TypeScript knows this won't work because updatedArray[] has numbers
 
+
+// CLASSES
+
+class Student {
+    // firstName: string;
+    // lastName: string;
+    // age: number;
+    // private courses: string[];
+
+    constructor(
+        public firstName: string, 
+        public lastName: string, 
+        public age: number, 
+        private courses: string[]
+    ) {}  // shorthand constructor notation
+
+    enroll(courseName: string) {
+        this.courses.push(courseName);
+    }
+
+    listCourses() {
+        return this.courses.slice();
+    }
+}
+
+const student = new Student('Max', 'Schwarz', 32, ['Angular']);
+student.enroll('React');
+
+// student.courses // error (private)
+// student.listCourses => Angular, React
+
+
