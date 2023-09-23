@@ -1,1 +1,2 @@
-# codelabs-typescript-fundamentals
+# TypeScript Fundamentals
+
