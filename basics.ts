@@ -2,7 +2,7 @@
 // More complex types: arrays, objects
 // Function types, parameters
 
-// Primitives
+// PRIMITIVES
 
 let age: number;
 
@@ -16,7 +16,8 @@ let isInstructor: boolean;
 
 isInstructor = true;
 
-// More complex types
+
+// MORE COMPLEX TYPES
 
 let hobbies: string[];
 
@@ -37,14 +38,16 @@ let people: {
     age: number;
 }[];
 
-// Type inference
+
+// TYPE INFERENCE
 
 let course = 'React - The Complete Guide';
 
 // course = 12341;  
 // TypeScript infers that this should be a string
 
-// Union Types
+
+// UNION TYPES
 
 let course2: string | number = 'React - The Complete Guide';
 
@@ -54,7 +57,8 @@ let userName2: string | string[];
 
 userName2 = 'Bud';
 
-// Type Aliases
+
+// TYPE ALIASES
 
 type Person = {
     name: string;
@@ -65,7 +69,8 @@ let person2: Person;
 
 let people2: Person[];
 
-// Function & types
+
+// FUNCTIONS & TYPES
 
 function add(a: number, b: number) {
     return a + b;  // returns a number
@@ -75,7 +80,8 @@ function print(value: any) {
     console.log(value);  // void function - doesn't return
 }
 
-// Generics
+
+// GENERICS
 
 function insertAtBeginning<T>(array: T[], value: T) {
     const newArray = [value, ...array];
