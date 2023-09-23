@@ -129,3 +129,34 @@ student.enroll('React');
 // student.listCourses => Angular, React
 
 
+// INTERFACES
+
+/* 
+Interfaces are similar to types but they have 1 extra feature:
+they can be implemented by classes which forces the class to have the structure defined by the interface
+*/
+
+interface Human {
+    firstName: string;
+    age: number;
+
+    greet: () => void;
+}
+
+let max: Human;
+
+max = {
+    firstName: 'Max',
+    age: 32,
+    greet() {
+        console.log('Hello!');
+    },
+};
+
+class Instructor implements Human {
+    firstName: string;
+    age: number;
+    greet() {
+        console.log('Hello!!!!');
+    }
+}
