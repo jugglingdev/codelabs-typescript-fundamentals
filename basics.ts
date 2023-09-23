@@ -44,6 +44,8 @@ let course = 'React - The Complete Guide';
 // course = 12341;  
 // TypeScript infers that this should be a string
 
+// Union Types
+
 let course2: string | number = 'React - The Complete Guide';
 
 course2 = 12341;  
@@ -51,3 +53,14 @@ course2 = 12341;
 let userName2: string | string[];
 
 userName2 = 'Bud';
+
+// Type Aliases
+
+type Person = {
+    name: string;
+    age: number;
+};
+
+let person2: Person;
+
+let people2: Person[];
