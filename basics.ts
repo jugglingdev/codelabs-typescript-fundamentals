@@ -64,3 +64,13 @@ type Person = {
 let person2: Person;
 
 let people2: Person[];
+
+// Function & types
+
+function add(a: number, b: number) {
+    return a + b;  // returns a number
+}
+
+function print(value: any) {
+    console.log(value);  // void function - doesn't return
+}
