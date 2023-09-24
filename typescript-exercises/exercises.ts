@@ -35,3 +35,11 @@ const car: Vehicle = {
 car.accelerate();  // The Toyota is accelerating
 car.brake();  // The Toyota is braking
 
+// Exercise 4: Functions & Types
+
+function greet(name: string) {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet('Carly'));  // Hello, Carly!
+
