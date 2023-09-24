@@ -43,3 +43,40 @@ function greet(name: string) {
 
 console.log(greet('Carly'));  // Hello, Carly!
 
+// Exercise 5: Classes with TypeScript
+
+class BoocampStudent {
+
+    constructor (
+        public studentName: string, 
+        public studentAge: number, 
+        private studentGrade: number,
+    ){}
+
+    displayInfo() {
+        console.log(`
+            Name: ${this.studentName}
+          \nAge: ${this.studentAge}
+          \nGrade: ${this.studentGrade}
+        `)
+    }
+
+    isPassing(gradeThreshold: number) {
+        return (this.studentGrade > gradeThreshold);
+    }
+}
+
+const studentA = new BoocampStudent('Sophie Meyers', 14, 96);
+const studentB = new BoocampStudent('Scott Meyers', 13, 68);
+
+studentA.displayInfo();
+    // Name: Sophie Meyers
+    // Age: 14
+    // Grade: 96
+studentB.displayInfo();
+    // Name: Scott Meyers
+    // Age: 13
+    // Grade: 68
+
+console.log(studentA.isPassing(70));  // true
+console.log(studentB.isPassing(70));  // false
