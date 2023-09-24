@@ -76,7 +76,7 @@ function add(a: number, b: number) {
     return a + b;  // returns a number
 }
 
-function print(value: any) {
+function printValue(value: any) {
     console.log(value);  // void function - doesn't return
 }
 
@@ -156,6 +156,12 @@ max = {
 class Instructor implements Human {
     firstName: string;
     age: number;
+
+    constructor(firstName: string, age: number) {
+        this.firstName = firstName;
+        this.age = age;
+    }
+
     greet() {
         console.log('Hello!!!!');
     }
